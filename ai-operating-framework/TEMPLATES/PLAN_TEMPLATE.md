@@ -1,3 +1,4 @@
+> Use this to decide how the task will be executed.
 # Plan Template
 
 ## Task

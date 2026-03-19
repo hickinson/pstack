@@ -2,36 +2,57 @@
 
 ## Purpose
 
-Convert completed work into reusable knowledge.
+To capture useful outputs, decisions, and patterns in a reusable and structured way.
+
+---
+
+## Use when
+
+- a useful output should be reused
+- a decision should be recorded
+- a repeatable pattern has emerged
+- knowledge would otherwise be lost
+
+---
 
 ## Inputs
 
-- final output
-- review notes
-- verification notes
-- decisions made
+- output, decision, or workflow
+- context (why it matters)
+
+---
 
 ## Outputs
 
-- handover note
-- decision log entry
-- reusable pattern
-- follow-up actions
+- clean, structured summary
+- key points or decisions
+- reusable format (if applicable)
+- suggested storage location (if relevant)
+
+---
 
 ## Operating rules
 
-- capture what matters
-- avoid verbose history dumps
-- extract reusable lessons
-- keep records practical
+- prioritise usefulness over completeness
+- keep documentation concise and structured
+- avoid duplicating existing content
+- capture only what is worth reusing
+- do not document trivial work
 
-## Standard prompt pattern
+---
 
-Summarise this completed task into reusable operational knowledge.
+## Default invocation template
+
+Document the following in a reusable and structured way.
 
 Return:
-- key decision
-- what worked
-- what did not
-- what should become a repeatable pattern
-- any follow-up actions
+- concise summary
+- key points or decisions
+- reusable format (if applicable)
+- where this should be stored
+
+Content:
+[insert content]
+
+Context:
+[insert context]

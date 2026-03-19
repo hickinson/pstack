@@ -2,36 +2,61 @@
 
 ## Purpose
 
-Check whether the work is fit for purpose and supported by evidence.
+To confirm the correctness, validity, and reliability of an output.
+
+---
+
+## Use when
+
+- accuracy matters
+- claims, facts, or reasoning need to be trusted
+- the output will inform decisions or actions
+- assumptions need to be tested
+
+---
 
 ## Inputs
 
-- task brief
-- output
-- review findings
-- validation requirements
+- output to be verified
+- original task or brief (if available)
+- any known sources or references
+
+---
 
 ## Outputs
 
-- verification method
-- checks performed
-- issues found
-- pass or revise recommendation
+- what has been verified
+- what cannot be verified
+- identified uncertainties or risks
+- recommended actions (if further validation is needed)
+
+---
 
 ## Operating rules
 
-- verify with evidence
-- choose checks proportionate to risk
-- distinguish tested from untested
-- do not confuse confidence with proof
+- distinguish clearly between:
+  - verified
+  - assumed
+  - unknown
+- do not invent certainty
+- highlight areas where evidence is missing
+- prioritise correctness over completeness
+- be explicit about limitations
 
-## Standard prompt pattern
+---
 
-Define and run the most appropriate verification approach for this output.
+## Default invocation template
+
+Verify the following output.
 
 Return:
-- verification steps
-- what was checked
-- what passed
-- what remains uncertain
-- whether the work is ready to deliver
+- what is clearly correct
+- what is uncertain or unsupported
+- any risks or assumptions
+- recommended next steps if further verification is needed
+
+Task:
+[insert task]
+
+Output:
+[insert output]

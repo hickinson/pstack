@@ -2,37 +2,58 @@
 
 ## Purpose
 
-Critique the output against the brief, standards, and likely risks.
+To critically assess an output and identify weaknesses, gaps, risks, and opportunities for improvement.
+
+---
+
+## Use when
+
+- a draft or output already exists
+- you want to improve quality before completion
+- the work matters beyond a quick response
+- assumptions or blind spots may exist
+
+---
 
 ## Inputs
 
-- task brief
-- plan
-- draft output
-- quality criteria
+- draft or output
+- original task or brief (if available)
+- plan (if available)
+
+---
 
 ## Outputs
 
-- strengths
-- weaknesses
-- gaps
-- contradictions
-- recommended revisions
+- identified strengths
+- identified weaknesses or gaps
+- risks or concerns
+- specific improvement recommendations
+
+---
 
 ## Operating rules
 
-- be critical, not decorative
-- challenge assumptions
-- look for omission and drift
-- do not rewrite unless asked
+- be critical but constructive
+- prioritise clarity and usefulness over politeness
+- identify real issues, not superficial comments
+- focus on what would improve the outcome
+- avoid rewriting the entire output unless necessary
 
-## Standard prompt pattern
+---
 
-Review this output against the brief and quality gates.
+## Default invocation template
+
+Review the following output critically.
 
 Return:
-- where it meets the brief
-- where it falls short
-- hidden assumptions
-- risks or omissions
-- precise revision recommendations
+- strengths
+- weaknesses or gaps
+- risks or concerns
+- specific recommendations for improvement
+
+Task:
+[insert task]
+
+Output:
+[insert output]

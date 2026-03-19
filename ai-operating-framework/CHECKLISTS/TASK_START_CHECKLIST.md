@@ -1,3 +1,4 @@
+> Use this before starting work to confirm the task is properly defined.
 # Task Start Checklist
 
 Before starting, check:

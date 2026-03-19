@@ -1,3 +1,4 @@
+> Use this to challenge the quality of an output before calling it complete.
 # Review Checklist
 
 Review the output against the following:

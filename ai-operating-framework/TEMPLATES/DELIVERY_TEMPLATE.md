@@ -1,3 +1,4 @@
+> Use this to package a deliverable for sharing, handover, or presentation.
 # Delivery Template
 
 ## Deliverable

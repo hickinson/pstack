@@ -2,41 +2,57 @@
 
 ## Purpose
 
-Turn a rough ask into a task brief that is clear enough to act on.
+To turn vague, incomplete, or ambiguous requests into a clear and usable task definition.
+
+---
+
+## Use when
+
+- the task is not well defined
+- requirements are unclear or incomplete
+- multiple interpretations are possible
+- you are about to start work but feel uncertain about what is actually needed
+
+---
 
 ## Inputs
 
-- raw request
-- context
-- constraints
-- desired outcome if known
+- rough idea, request, or prompt
+- any known constraints
+- initial context (if available)
+
+---
 
 ## Outputs
 
-- objective
-- constraints
-- assumptions
-- inputs
-- expected outputs
-- success criteria
-- open questions
+- a clarified task definition
+- explicit assumptions
+- identified gaps or unknowns
+- suggested next steps
+
+---
 
 ## Operating rules
 
-- reduce ambiguity
-- make assumptions explicit
-- identify what is missing
-- avoid solving before defining
+- do not assume missing details without stating them
+- surface ambiguity rather than hiding it
+- prefer clarity over completeness
+- make implicit assumptions explicit
+- structure the output so it can feed directly into a task brief
 
-## Standard prompt pattern
+---
 
-Turn the following rough ask into a structured task brief.
+## Default invocation template
+
+Clarify the following task.
+
+Make it explicit, structured, and usable.
 
 Return:
-- objective
-- context
-- constraints
+- a clear task definition
 - assumptions
-- desired output
-- success criteria
-- risks or unknowns
+- missing information
+- recommended next step
+
+Task:
+[insert task]

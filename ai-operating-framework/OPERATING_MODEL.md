@@ -1,88 +1,225 @@
 # Operating Model
 
-## Overview
+This file explains how pstack is structured and how to use it in practice.
 
-This framework has four layers:
+It is the bridge between the design philosophy and real execution.
 
-1. Portable core
-2. Personal overlay
-3. Professional overlay
-4. Enterprise-safe adapter concept
+---
 
-The same core workflow should remain recognisable across all four.
+## Purpose
 
-## 1. Portable core
+The purpose of the operating model is to:
 
-The portable core contains:
-- design philosophy
-- operating model
-- workflow stages
-- roles and behaviours
-- quality gates
-- reusable templates
-- reusable checklists
+- define how the repository is organised
+- explain how work moves through the system
+- distinguish between what is read and what is used
+- make the framework usable, not just understandable
 
-The core should stay durable and largely tool-agnostic.
+---
 
-## 2. Personal overlay
+## The five layers of pstack
 
-The personal overlay adapts the core for:
-- experimentation
-- side projects
-- writing
-- coding
-- prototyping
-- rapid iteration
+pstack is organised into five layers.
 
-It should stay light and fast.
+Each layer has a distinct role.
 
-## 3. Professional overlay
+| Layer | Purpose | Used when |
+|------|--------|----------|
+| Core | Defines principles and structure | Read at the start and revisited occasionally |
+| Overlays | Adapts the framework to context | Chosen per task |
+| Modules | Reusable AI behaviours | Invoked during work |
+| Templates | Working artefacts | Used to define and structure tasks |
+| Checklists | Quality and safety controls | Used before completion |
 
-The professional overlay adapts the core for:
-- explainability
-- consistency
-- safer practice
-- better documentation
-- clearer approval boundaries
+---
 
-It should be more structured, but still practical.
+## Core
 
-## 4. Enterprise-safe adapter concept
+The core defines how pstack works.
 
-The enterprise adapter is not a separate framework.
+Files:
+- DESIGN_PHILOSOPHY.md
+- WORKFLOW_STAGES.md
+- QUALITY_GATES.md
 
-It is a translation layer for more constrained environments where:
-- tools are approved
-- actions are bounded
-- access is governed
-- data boundaries matter
-- logging and approvals may be required
+The core should remain:
+- tool-agnostic
+- stable over time
+- focused on durable principles
 
-## Integration concept
+---
 
-The framework assumes that tools sit below the operating model.
+## Overlays
+
+Overlays adapt the core for different contexts.
+
+Files:
+- PERSONAL_OVERLAY.md
+- PROFESSIONAL_OVERLAY.md
+- ENTERPRISE_ADAPTER.md
+
+Overlays define:
+- how strict the process should be
+- what level of governance is required
+- how tools and integrations should be used
+
+---
+
+## Modules
+
+Modules are reusable behaviours.
+
+They represent repeatable ways of using AI to perform parts of work.
+
+Examples:
+- Clarifier
+- Planner
+- Implementer
+- Reviewer
+- Verifier
+
+Modules:
+- are portable
+- are not tied to any one tool
+- can be invoked manually or later implemented as agents
+
+Each module defines:
+- when to use it
+- what inputs it expects
+- what outputs it produces
+- a default invocation pattern
+
+---
+
+## Templates
+
+Templates create working artefacts.
+
+They are used to structure work before and during execution.
+
+Examples:
+- Task brief
+- Plan
+- Review record
+- Delivery output
+
+Templates ensure:
+- work is not purely conversational
+- decisions are made explicit
+- outputs are structured and reusable
+
+---
+
+## Checklists
+
+Checklists act as control points.
+
+They are used to prevent:
+- premature completion
+- hidden assumptions
+- unverified outputs
+
+Examples:
+- task start checklist
+- review checklist
+- verification checklist
+
+Checklists should be:
+- lightweight
+- used consistently
+- focused on decision quality, not bureaucracy
+
+---
+
+## How work moves through pstack
+
+Work flows through the system in stages.
+
+The detailed stages are defined in `WORKFLOW_STAGES.md`.
+
+For practical use, pstack v0.1 uses a simplified flow:
+
+**Brief → Plan → Build → Review → Verify → Deliver**
+
+---
+
+## Minimum usable workflow
+
+For most tasks, the following flow is sufficient:
+
+1. Create a task brief  
+   → `TEMPLATES/TASK_BRIEF_TEMPLATE.md`
+
+2. Create a plan  
+   → `TEMPLATES/PLAN_TEMPLATE.md`
+
+3. Execute using modules  
+   → `MODULES/*`
+
+4. Review the output  
+   → `MODULES/REVIEWER.md`  
+   → `CHECKLISTS/REVIEW_CHECKLIST.md`
+
+5. Verify the output  
+   → `MODULES/VERIFIER.md`  
+   → `CHECKLISTS/VERIFICATION_CHECKLIST.md`
+
+6. Deliver or revise  
+
+This is the core operating loop.
+
+---
+
+## What is read vs what is used
+
+Not all files are used in the same way.
+
+### Read occasionally
+- DESIGN_PHILOSOPHY.md
+- OPERATING_MODEL.md
+- WORKFLOW_STAGES.md
+- QUALITY_GATES.md
+- overlays
+
+### Used regularly
+- TEMPLATES/*
+- MODULES/*
+- CHECKLISTS/*
+
+If the framework is working correctly, most time is spent in:
+- templates
+- modules
+- checklists
+
+---
+
+## Portability
+
+pstack is designed to be portable.
 
 This means:
-- prompts are replaceable
-- tools are replaceable
-- specific platforms are replaceable
-- the workflow remains the same even when the implementation changes
 
-## MCP position
+- no dependency on a single tool
+- modules can be invoked in any AI interface
+- templates can be used in any environment
+- integrations (such as MCP) sit outside the core
 
-MCP belongs in the integration layer as a portable capability adapter.
+Tool-specific implementations should be treated as adapters, not the framework itself.
 
-### Personal
-MCP can be used more loosely for experimentation and capability extension.
+---
 
-### Professional
-MCP should be scoped to approved use cases and documented patterns.
+## Evolution approach
 
-### Enterprise
-MCP should be tightly governed, capability-scoped, auditable where needed, and wrapped through approved adapters.
+pstack should evolve through use, not theory.
 
-## Universal rule
+This means:
 
-Reasoning, drafting, planning, review, and verification may be AI-assisted.
+- start with the minimum workflow
+- run real tasks through the system
+- identify friction
+- simplify before adding complexity
+- only add structure that proves useful
 
-Final accountability, sensitive judgement, and high-risk actions should remain explicitly human-controlled unless formal governance says otherwise.
+The goal is not completeness.
+
+The goal is usability and durability.

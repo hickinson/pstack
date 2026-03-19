@@ -1,3 +1,4 @@
+> Use this when work involves professional risk, sensitive data, or governed environments.
 # Professional Safety Checklist
 
 Use this before delivering professional outputs or using professional tools.

@@ -1,3 +1,4 @@
+> Use this to define a task clearly before any work begins.
 # Task Brief Template
 
 ## Task title

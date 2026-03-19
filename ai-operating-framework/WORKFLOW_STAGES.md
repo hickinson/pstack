@@ -108,3 +108,112 @@ Record what should become reusable.
 Small personal tasks may compress stages 1 to 6 into one pass.
 
 Professional and enterprise work should make stages 3, 7, 8, and 9 more explicit.
+
+---
+
+## Minimum usable workflow (v0.1)
+
+For most tasks, pstack uses a simplified execution flow:
+
+**Brief → Plan → Build → Review → Verify → Deliver**
+
+This is the default operating loop.
+
+Not every task requires every stage, but meaningful work should not skip:
+- review
+- verification
+
+---
+
+## Mapped files
+
+Each stage maps directly to files in the repository.
+
+### Brief
+Define the task clearly:
+- `TEMPLATES/TASK_BRIEF_TEMPLATE.md`
+- optionally use `MODULES/CLARIFIER.md`
+
+---
+
+### Plan
+Decide how the task will be executed:
+- `TEMPLATES/PLAN_TEMPLATE.md`
+- optionally use `MODULES/PLANNER.md`
+
+---
+
+### Build
+Produce the output:
+- `MODULES/IMPLEMENTER.md`
+- optionally supported by:
+  - `MODULES/RESEARCHER.md`
+  - `MODULES/ROUTER.md`
+
+---
+
+### Review
+Critically assess the output:
+- `MODULES/REVIEWER.md`
+- `CHECKLISTS/REVIEW_CHECKLIST.md`
+
+---
+
+### Verify
+Confirm correctness and validity:
+- `MODULES/VERIFIER.md`
+- `CHECKLISTS/VERIFICATION_CHECKLIST.md`
+
+---
+
+### Deliver
+Package or share the output:
+- `TEMPLATES/DELIVERY_TEMPLATE.md` (if needed)
+
+---
+
+## Practical execution loop
+
+In practice, work is rarely linear.
+
+You will often loop between stages:
+
+- Brief ↔ Clarify
+- Plan ↔ Adjust
+- Build ↔ Research
+- Review ↔ Improve
+- Verify ↔ Rework
+
+This is expected.
+
+The goal is not rigid sequence.
+
+The goal is:
+- clarity of intent
+- structured execution
+- deliberate review
+- explicit verification
+
+---
+
+## When to use the full stage model
+
+The full set of workflow stages is useful when:
+
+- work is complex
+- multiple stakeholders are involved
+- traceability is important
+- the task spans multiple iterations
+
+For simple tasks, use the minimum workflow.
+
+---
+
+## Key principle
+
+Do not expand the workflow for the sake of completeness.
+
+Use the simplest version that maintains:
+- clarity
+- quality
+- confidence in the result

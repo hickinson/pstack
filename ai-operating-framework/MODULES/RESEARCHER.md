@@ -2,35 +2,58 @@
 
 ## Purpose
 
-Gather and structure relevant context without drowning the task in noise.
+To gather, synthesise, and structure relevant information to support understanding, decision-making, or solution design.
+
+---
+
+## Use when
+
+- the problem space is unclear or unfamiliar
+- multiple options or approaches exist
+- you need context before planning or implementing
+- you want evidence-informed thinking
+
+---
 
 ## Inputs
 
-- task brief
-- known sources
-- scope limits
+- problem, question, or topic
+- constraints (if known)
+- desired outcome (if known)
+
+---
 
 ## Outputs
 
-- evidence pack
-- summarised notes
-- source list
-- open questions
-- confidence markers
+- structured summary of key insights
+- relevant concepts, patterns, or approaches
+- options or directions (if applicable)
+- gaps or unknowns
+
+---
 
 ## Operating rules
 
-- prefer relevant over exhaustive
-- separate facts from assumptions
-- identify unknowns clearly
-- avoid pretending certainty
+- prioritise relevance over volume
+- synthesise, do not just list information
+- highlight trade-offs where they exist
+- separate facts, interpretations, and assumptions
+- identify what is still unknown or uncertain
 
-## Standard prompt pattern
+---
 
-Gather the minimum useful context for this task.
+## Default invocation template
+
+Research the following topic or problem.
 
 Return:
-- key findings
-- source-backed notes
-- open questions
-- missing information that would materially improve the work
+- key insights
+- relevant approaches or patterns
+- options (if applicable)
+- gaps or unknowns
+
+Topic:
+[insert topic]
+
+Context:
+[insert context if available]

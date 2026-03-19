@@ -1,77 +1,179 @@
 # Quality Gates
 
-This framework uses lightweight gates to prevent low-quality or unsafe outputs from being treated as complete.
+Quality gates are used to prevent premature completion and ensure that outputs are fit for purpose.
+
+They are not intended to add bureaucracy.
+
+They are intended to improve decision quality and confidence.
+
+---
 
 ## Core quality gates
 
-### Gate 1: Task clarity
-Is the task defined clearly enough to execute?
+These apply to most meaningful tasks.
 
-Check:
-- objective is clear
-- constraints are visible
-- output type is defined
-- success criteria exist
+### 1. Task clarity
 
-### Gate 2: Plan coherence
-Does the plan make sense?
+Before work begins:
 
-Check:
-- steps are sensible
-- dependencies are visible
-- risks are recognised
-- the approach matches the context
+- Is the task clearly defined?
+- Is the outcome understood?
+- Are assumptions visible?
 
-### Gate 3: Output quality
-Is the work coherent and aligned to the brief?
+If not:
+→ return to clarification
 
-Check:
-- output addresses the objective
-- obvious gaps are identified
-- the level of detail is appropriate
-- the work is internally consistent
+---
 
-### Gate 4: Verification evidence
-Has the work been checked in a meaningful way?
+### 2. Plan coherence
 
-Check:
-- verification method was chosen
-- checks were run
-- findings were recorded
-- unresolved issues are visible
+Before execution:
 
-### Gate 5: Delivery readiness
-Is the output ready to use, share, publish, or hand over?
+- Is there a clear approach?
+- Are key steps identified?
+- Are dependencies or risks understood?
 
-Check:
-- final form is usable
-- caveats are visible
-- next steps are clear
-- ownership is clear where relevant
+If not:
+→ improve the plan
+
+---
+
+### 3. Output quality
+
+Before calling something complete:
+
+- Does the output meet the brief?
+- Is it clear, structured, and usable?
+- Are obvious gaps or weaknesses present?
+
+If not:
+→ revise the output
+
+---
+
+### 4. Review depth
+
+Before completion:
+
+- Has the output been critically reviewed?
+- Were weaknesses actively identified?
+- Was feedback incorporated?
+
+If not:
+→ perform a proper review
+
+---
+
+### 5. Verification evidence
+
+Before delivery:
+
+- What has actually been checked?
+- Are claims supported?
+- Are assumptions tested where needed?
+
+If unclear:
+→ verify explicitly
+
+---
+
+### 6. Delivery readiness
+
+Before sharing:
+
+- Is the output ready for its audience?
+- Is it appropriately structured and presented?
+- Would you be comfortable standing behind it?
+
+If not:
+→ refine before delivery
+
+---
 
 ## Professional safety gates
 
-For professional and enterprise-adapted work, also check:
+These apply when work has organisational, legal, or reputational impact.
 
-### Safety Gate A: Data boundary
-Does this touch data that requires special handling?
+### 1. Data boundary
 
-### Safety Gate B: Capability permission
-Is the tool, connector, or action actually approved?
+- Does this involve sensitive or restricted data?
+- Is the data being handled appropriately?
 
-### Safety Gate C: Human approval
-Should a human explicitly approve this before it proceeds?
+---
 
-### Safety Gate D: Risk classification
-Could this create legal, financial, reputational, or service risk?
+### 2. Capability permission
 
-### Safety Gate E: Logging requirement
-Does this need a record, trace, or audit note?
+- Is the tool or integration being used approved?
+- Are you operating within expected constraints?
 
-## Proportionality rule
+---
 
-The higher the risk, the more explicit the gates must become.
+### 3. Human accountability
 
-Do not apply enterprise-grade process to every personal task.
+- Who is responsible for the final output?
+- Has appropriate human judgement been applied?
 
-Do not apply casual personal standards to sensitive professional work.
+---
+
+### 4. Risk classification
+
+- What is the impact if this is wrong?
+- Does this require additional scrutiny?
+
+---
+
+### 5. Logging and traceability
+
+- Should this decision or output be recorded?
+- Is there a need for audit or traceability?
+
+---
+
+## When to apply which gates
+
+### Personal work
+
+- Use core quality gates
+- Apply lightweight judgement
+- Focus on speed and learning
+
+---
+
+### Professional work
+
+- Use core quality gates
+- Apply relevant safety gates
+- Ensure outputs are defensible
+
+---
+
+### Enterprise or constrained environments
+
+- Apply core quality gates
+- Apply all relevant safety gates explicitly
+- Respect tool, data, and process constraints
+
+---
+
+## Key principle
+
+Not every task needs every gate.
+
+But no meaningful task should skip:
+
+- review
+- verification
+
+---
+
+## Anti-pattern
+
+The most common failure is:
+
+“this looks good” → treated as complete
+
+Without:
+- structured review
+- explicit verification
+
+pstack exists to prevent that failure.

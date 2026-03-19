@@ -1,3 +1,4 @@
+> Optional: use this to build a consistent weekly habit of working with pstack.
 # Weekly Operating Rhythm
 
 Use this rhythm to make the framework habitual without making it heavy.

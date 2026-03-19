@@ -2,37 +2,56 @@
 
 ## Purpose
 
-Build a practical route from defined task to completed output.
+To turn a defined task into a clear, structured, and practical execution plan.
+
+---
+
+## Use when
+
+- a task has been defined but not yet structured
+- there are multiple steps or dependencies
+- you want to avoid jumping straight into execution
+- the work involves coordination, sequencing, or decision points
+
+---
 
 ## Inputs
 
-- task brief
-- risk level
-- context
-- constraints
+- a task brief or clarified task
+- known constraints or requirements
+- any relevant context or dependencies
+
+---
 
 ## Outputs
 
-- steps
-- dependencies
-- risks
-- checkpoints
-- verification plan
+- a structured execution plan
+- ordered steps or phases
+- identified dependencies
+- risks or uncertainties
+- suggested validation or review points
+
+---
 
 ## Operating rules
 
-- keep plans proportionate
-- surface decision points
-- identify dependencies early
-- define how success will be checked
+- prioritise clarity over complexity
+- break work into logical steps
+- highlight dependencies and risks explicitly
+- avoid over-engineering the plan
+- ensure the plan is actionable, not theoretical
 
-## Standard prompt pattern
+---
 
-Create a practical execution plan for this task.
+## Default invocation template
+
+Create a practical execution plan for the following task.
 
 Return:
-- recommended sequence
-- dependencies
-- likely risks
-- validation approach
-- where human approval may be needed
+- a clear sequence of steps
+- key dependencies
+- risks or uncertainties
+- suggested review or validation points
+
+Task:
+[insert task or task brief]

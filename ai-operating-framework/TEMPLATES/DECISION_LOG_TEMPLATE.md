@@ -1,3 +1,4 @@
+> Use this to capture decisions and insights that should be reused later.
 # Decision Log Entry
 
 ## Decision

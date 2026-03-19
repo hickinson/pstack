@@ -1,3 +1,4 @@
+> Use this to confirm what has actually been checked and validated.
 # Verification Checklist
 
 Verify the output using checks proportionate to the task.

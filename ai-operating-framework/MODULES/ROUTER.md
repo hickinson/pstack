@@ -2,35 +2,60 @@
 
 ## Purpose
 
-Determine what should happen next in the workflow.
+To determine the most appropriate next step, module, or workflow based on the current state of a task.
+
+---
+
+## Use when
+
+- you are unsure what to do next
+- multiple paths or approaches exist
+- a task feels stuck or unclear
+- you want to move from thinking to structured execution
+
+---
 
 ## Inputs
 
-- current stage
-- task state
-- review findings
-- risk level
+- current task or problem
+- current state (what exists so far)
+- goal or desired outcome
+
+---
 
 ## Outputs
 
-- next best step
-- recommended module
-- whether to escalate or approve
-- rationale
+- recommended next step
+- recommended module(s) to use
+- brief reasoning for the recommendation
+- optional alternative paths
+
+---
 
 ## Operating rules
 
-- keep the workflow moving
-- escalate when judgement or risk requires it
-- avoid unnecessary loops
-- prefer clarity over cleverness
+- prioritise progress over perfection
+- recommend the simplest effective next step
+- avoid over-engineering workflows
+- keep reasoning concise and actionable
 
-## Standard prompt pattern
+---
 
-Given the current task state, determine the next best step.
+## Default invocation template
+
+Given the current task and state, recommend the next step.
 
 Return:
-- next stage
-- next module to invoke
-- whether approval or escalation is needed
-- concise rationale
+- recommended next step
+- which module(s) to use
+- brief reasoning
+- optional alternatives
+
+Task:
+[insert task]
+
+Current state:
+[insert current state]
+
+Goal:
+[insert goal]

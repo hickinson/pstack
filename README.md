@@ -1,70 +1,92 @@
-# AI Operating Framework
+# pstack
 
-A portable, workflow-first framework for using AI in a repeatable, durable, and safe way across personal, professional, and more constrained environments.
+pstack is a portable AI operating framework for structuring work in a more repeatable, AI-native, and tool-agnostic way.
 
-## What this is
+It is designed to help turn ad hoc prompting into a practical workflow that can be used across personal work, professional work, and more constrained enterprise environments over time.
 
-This repository is not a prompt dump and not a tool-specific setup.
+## What pstack is
 
-It is a lightweight operating framework for:
-- structuring work
-- using AI in clear stages
-- modularising repeatable behaviours
-- keeping human judgement where it matters
-- staying portable across tools and environments
+pstack is:
+- a workflow-first operating framework
+- a lightweight repository of reusable patterns for AI-assisted work
+- a portable core with context-specific overlays
+- a practical system for moving from idea to delivery with clearer structure, review, and verification
+- a foundation for future tool-specific adapters without being trapped inside one tool
 
-## Core idea
+## What pstack is not
 
-The workflow is the framework.  
-AI is a capability inside the workflow, not the workflow itself.
+pstack is not:
+- a giant prompt library
+- a monolithic autonomous agent system
+- a tool-specific framework
+- a replacement for human judgement
+- a reason to add process where none is needed
+- a complete enterprise governance model
 
-## Design goals
+## The v0.1 backbone
 
-- one portable core
-- one personal overlay
-- one professional overlay
-- one enterprise-safe adapter concept
-- durable principles over vendor tricks
-- lean structure over clever complexity
+These files form the real operating spine of pstack v0.1:
 
-## Repo structure
+1. `ai-operating-framework/DESIGN_PHILOSOPHY.md`
+2. `ai-operating-framework/OPERATING_MODEL.md`
+3. `ai-operating-framework/WORKFLOW_STAGES.md`
+4. `ai-operating-framework/QUALITY_GATES.md`
+5. `ai-operating-framework/TEMPLATES/TASK_BRIEF_TEMPLATE.md`
+6. `ai-operating-framework/TEMPLATES/PLAN_TEMPLATE.md`
+7. `ai-operating-framework/CHECKLISTS/REVIEW_CHECKLIST.md`
+8. `ai-operating-framework/CHECKLISTS/VERIFICATION_CHECKLIST.md`
 
-- `DESIGN_PHILOSOPHY.md` explains the principles
-- `OPERATING_MODEL.md` explains how the framework is structured
-- `WORKFLOW_STAGES.md` defines the universal workflow
-- `ROLES_AND_BEHAVIOURS.md` defines reusable AI roles and behaviours
-- `QUALITY_GATES.md` defines review, verification, and safety gates
-- `PERSONAL_OVERLAY.md` adapts the framework for lightweight personal use
-- `PROFESSIONAL_OVERLAY.md` adapts the framework for safer, auditable work use
-- `ENTERPRISE_ADAPTER.md` explains how to translate the framework into more constrained environments
-- `TEMPLATES/` contains reusable working templates
-- `CHECKLISTS/` contains control and review checklists
-- `MODULES/` contains operational role cards for AI-assisted work
+If pstack works in practice, it will be because these files work together.
 
-## How to use this repo
+## Reading path
 
-1. Start with `DESIGN_PHILOSOPHY.md`
-2. Read `OPERATING_MODEL.md`
-3. Follow `WORKFLOW_STAGES.md`
-4. Use a template from `TEMPLATES/` for a real piece of work
-5. Invoke one or more modules from `MODULES/`
-6. Run the relevant checklist from `CHECKLISTS/`
-7. Adapt your operating mode using the right overlay
+Use this reading path if you are new to pstack:
 
-## Use principles
+1. `ai-operating-framework/DESIGN_PHILOSOPHY.md`
+2. `ai-operating-framework/OPERATING_MODEL.md`
+3. `ai-operating-framework/WORKFLOW_STAGES.md`
+4. `ai-operating-framework/QUALITY_GATES.md`
+5. Choose the relevant overlay:
+   - `ai-operating-framework/PERSONAL_OVERLAY.md`
+   - `ai-operating-framework/PROFESSIONAL_OVERLAY.md`
+   - `ai-operating-framework/ENTERPRISE_ADAPTER.md`
+6. Read the modules guide and relevant modules
+7. Use the templates and checklists on a real task
 
-- keep the core tool-agnostic
-- use the personal overlay for speed and experimentation
-- use the professional overlay for work that needs explanation, safer practice, or review
-- use the enterprise adapter when translating this framework into constrained tools and environments
-- only add complexity when repeated use proves it is needed
+## Usage path
 
-## What this is not
+Use this path when running a real task through pstack:
 
-This framework is not:
-- a universal autonomous agent system
-- a replacement for professional judgement
-- a full governance model
-- a reason to automate everything
+1. Start with `ai-operating-framework/TEMPLATES/TASK_BRIEF_TEMPLATE.md`
+2. Create a plan with `ai-operating-framework/TEMPLATES/PLAN_TEMPLATE.md`
+3. Invoke the relevant modules from `ai-operating-framework/MODULES/`
+4. Review the output using `ai-operating-framework/CHECKLISTS/REVIEW_CHECKLIST.md`
+5. Verify the output using `ai-operating-framework/CHECKLISTS/VERIFICATION_CHECKLIST.md`
+6. Deliver or revise
+7. Capture reusable learning if the task produced a useful pattern
 
-It is a starter operating model that can evolve as real usage teaches what is worth keeping.
+## Minimum usable workflow
+
+For v0.1, the default pstack workflow is:
+
+**Brief → Plan → Build → Review → Verify → Deliver**
+
+This is the minimum workflow pstack must support cleanly.
+
+## Repository structure
+
+```text
+pstack/
+├── README.md
+└── ai-operating-framework/
+    ├── DESIGN_PHILOSOPHY.md
+    ├── OPERATING_MODEL.md
+    ├── WORKFLOW_STAGES.md
+    ├── QUALITY_GATES.md
+    ├── ROLES_AND_BEHAVIOURS.md
+    ├── PERSONAL_OVERLAY.md
+    ├── PROFESSIONAL_OVERLAY.md
+    ├── ENTERPRISE_ADAPTER.md
+    ├── MODULES/
+    ├── TEMPLATES/
+    └── CHECKLISTS/

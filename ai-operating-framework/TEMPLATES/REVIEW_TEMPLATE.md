@@ -1,3 +1,4 @@
+> Use this to record structured review findings and improvement actions.
 # Review Template
 
 ## Output reviewed
