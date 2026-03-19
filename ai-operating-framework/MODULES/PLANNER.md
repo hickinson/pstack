@@ -55,3 +55,6 @@ Return:
 
 Task:
 [insert task or task brief]
+
+Context:
+[Optional research output]

@@ -53,7 +53,7 @@ Return:
 - specific recommendations for improvement
 
 Task:
-[insert task]
+[insert original task]
 
 Output:
-[insert output]
+[insert implementation output]
