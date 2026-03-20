@@ -50,3 +50,11 @@ Choose one:
 - personal
 - professional
 - enterprise-adapted
+
+## In scope
+
+What is deliberately included in this task?
+
+## Out of scope
+
+What is deliberately excluded so the task stays bounded?

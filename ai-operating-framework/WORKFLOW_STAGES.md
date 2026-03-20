@@ -4,6 +4,14 @@ This framework uses one universal workflow.
 
 Not every task needs the same depth, but every meaningful task should follow this shape.
 
+## Stage 0: Capture and shape the idea
+Use this when the starting point is a raw thought, opportunity, or half-formed concept rather than a usable task.
+
+### Output
+- a shaped idea
+- a clearer problem statement
+- a first useful version of the task
+
 ## Stage 1: Intake
 Capture the raw request, idea, or problem.
 
@@ -105,7 +113,7 @@ Record what should become reusable.
 
 ## Compression rule
 
-Small personal tasks may compress stages 1 to 6 into one pass.
+Small personal tasks may compress stages 0 to 6 into one pass.
 
 Professional and enterprise work should make stages 3, 7, 8, and 9 more explicit.
 
@@ -115,9 +123,11 @@ Professional and enterprise work should make stages 3, 7, 8, and 9 more explicit
 
 For most tasks, pstack uses a simplified execution flow:
 
-**Brief → Plan → Build → Review → Verify → Deliver**
+**Idea → Brief → Plan → Build → Review → Verify → Deliver**
 
 This is the default operating loop.
+
+If the task is already clear, start at the brief.
 
 Not every task requires every stage, but meaningful work should not skip:
 - review
@@ -128,6 +138,13 @@ Not every task requires every stage, but meaningful work should not skip:
 ## Mapped files
 
 Each stage maps directly to files in the repository.
+
+### Idea
+Capture and shape the idea:
+- `TEMPLATES/IDEA_CAPTURE_TEMPLATE.md`
+- `MODULES/IDEA_PROCESSOR.md`
+
+---
 
 ### Brief
 Define the task clearly:
@@ -178,6 +195,7 @@ In practice, work is rarely linear.
 
 You will often loop between stages:
 
+- Idea ↔ Clarify
 - Brief ↔ Clarify
 - Plan ↔ Adjust
 - Build ↔ Research

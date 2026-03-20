@@ -72,6 +72,7 @@ Modules are reusable behaviours.
 They represent repeatable ways of using AI to perform parts of work.
 
 Examples:
+- Idea Processor
 - Clarifier
 - Planner
 - Implementer
@@ -98,6 +99,7 @@ Templates create working artefacts.
 They are used to structure work before and during execution.
 
 Examples:
+- Idea capture
 - Task brief
 - Plan
 - Review record
@@ -139,7 +141,7 @@ The detailed stages are defined in `WORKFLOW_STAGES.md`.
 
 For practical use, pstack v0.1 uses a simplified flow:
 
-**Brief → Plan → Build → Review → Verify → Deliver**
+**Idea → Brief → Plan → Build → Review → Verify → Deliver**
 
 ---
 
@@ -147,24 +149,28 @@ For practical use, pstack v0.1 uses a simplified flow:
 
 For most tasks, the following flow is sufficient:
 
-1. Create a task brief  
+1. Capture and refine the idea when needed  
+   → `TEMPLATES/IDEA_CAPTURE_TEMPLATE.md`  
+   → `MODULES/IDEA_PROCESSOR.md`
+
+2. Create a task brief  
    → `TEMPLATES/TASK_BRIEF_TEMPLATE.md`
 
-2. Create a plan  
+3. Create a plan  
    → `TEMPLATES/PLAN_TEMPLATE.md`
 
-3. Execute using modules  
+4. Execute using modules  
    → `MODULES/*`
 
-4. Review the output  
+5. Review the output  
    → `MODULES/REVIEWER.md`  
    → `CHECKLISTS/REVIEW_CHECKLIST.md`
 
-5. Verify the output  
+6. Verify the output  
    → `MODULES/VERIFIER.md`  
    → `CHECKLISTS/VERIFICATION_CHECKLIST.md`
 
-6. Deliver or revise  
+7. Deliver or revise  
 
 This is the core operating loop.
 

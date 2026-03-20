@@ -50,28 +50,30 @@ Use this reading path if you are new to pstack:
    - `ai-operating-framework/PERSONAL_OVERLAY.md`
    - `ai-operating-framework/PROFESSIONAL_OVERLAY.md`
    - `ai-operating-framework/ENTERPRISE_ADAPTER.md`
-6. Read the modules guide and relevant modules
+6. Read `ai-operating-framework/MODULES/README.md`
 7. Use the templates and checklists on a real task
 
 ## Usage path
 
 Use this path when running a real task through pstack:
 
-1. Start with `ai-operating-framework/TEMPLATES/TASK_BRIEF_TEMPLATE.md`
-2. Create a plan with `ai-operating-framework/TEMPLATES/PLAN_TEMPLATE.md`
-3. Invoke the relevant modules from `ai-operating-framework/MODULES/`
-4. Review the output using `ai-operating-framework/CHECKLISTS/REVIEW_CHECKLIST.md`
-5. Verify the output using `ai-operating-framework/CHECKLISTS/VERIFICATION_CHECKLIST.md`
-6. Deliver or revise
-7. Capture reusable learning if the task produced a useful pattern
+1. If starting with a rough idea, use `ai-operating-framework/TEMPLATES/IDEA_CAPTURE_TEMPLATE.md`
+2. Refine the idea with `ai-operating-framework/MODULES/IDEA_PROCESSOR.md`
+3. Create a task brief with `ai-operating-framework/TEMPLATES/TASK_BRIEF_TEMPLATE.md`
+4. Create a plan with `ai-operating-framework/TEMPLATES/PLAN_TEMPLATE.md`
+5. Invoke the relevant modules from `ai-operating-framework/MODULES/`
+6. Review the output using `ai-operating-framework/CHECKLISTS/REVIEW_CHECKLIST.md`
+7. Verify the output using `ai-operating-framework/CHECKLISTS/VERIFICATION_CHECKLIST.md`
+8. Deliver or revise
+9. Capture reusable learning if the task produced a useful pattern
 
 ## Minimum usable workflow
 
 For v0.1, the default pstack workflow is:
 
-**Brief → Plan → Build → Review → Verify → Deliver**
+**Idea → Brief → Plan → Build → Review → Verify → Deliver**
 
-This is the minimum workflow pstack must support cleanly.
+If the task is already clear, you can skip the idea step and start at the brief.
 
 ## Repository structure
 
@@ -83,10 +85,84 @@ pstack/
     ├── OPERATING_MODEL.md
     ├── WORKFLOW_STAGES.md
     ├── QUALITY_GATES.md
-    ├── ROLES_AND_BEHAVIOURS.md
     ├── PERSONAL_OVERLAY.md
     ├── PROFESSIONAL_OVERLAY.md
     ├── ENTERPRISE_ADAPTER.md
     ├── MODULES/
+    │   ├── README.md
+    │   └── *.md
     ├── TEMPLATES/
+    │   └── *.md
     └── CHECKLISTS/
+        └── *.md
+```
+
+## Essential for v0.1
+
+These matter most right now:
+
+- `ai-operating-framework/DESIGN_PHILOSOPHY.md`
+- `ai-operating-framework/OPERATING_MODEL.md`
+- `ai-operating-framework/WORKFLOW_STAGES.md`
+- `ai-operating-framework/QUALITY_GATES.md`
+- `ai-operating-framework/TEMPLATES/TASK_BRIEF_TEMPLATE.md`
+- `ai-operating-framework/TEMPLATES/PLAN_TEMPLATE.md`
+- `ai-operating-framework/CHECKLISTS/REVIEW_CHECKLIST.md`
+- `ai-operating-framework/CHECKLISTS/VERIFICATION_CHECKLIST.md`
+- the core module files in `ai-operating-framework/MODULES/`
+
+## Secondary for v0.1
+
+These are useful, but not part of the tightest operating spine:
+
+- `ai-operating-framework/TEMPLATES/DELIVERY_TEMPLATE.md`
+- `ai-operating-framework/TEMPLATES/DECISION_LOG_TEMPLATE.md`
+- `ai-operating-framework/CHECKLISTS/PROFESSIONAL_SAFETY_CHECKLIST.md`
+- `ai-operating-framework/CHECKLISTS/WEEKLY_OPERATING_RHYTHM.md`
+- deeper use of `ai-operating-framework/ENTERPRISE_ADAPTER.md`
+- more advanced documentation and capture patterns
+
+## Current v0.1 focus
+
+The goal of v0.1 is not to expand pstack.
+
+The goal is to make it:
+- coherent
+- opinionated
+- usable in day-to-day work
+- portable across tools
+- simple enough to evolve through real usage
+
+## Design stance
+
+pstack follows a few strong rules:
+
+- workflow first
+- durable principles over tool tricks
+- one core, multiple overlays
+- modules as reusable behaviours
+- evidence before completion
+- human judgement at meaningful boundaries
+- simplification over documentation theatre
+
+## How pstack should evolve
+
+pstack should evolve through real use.
+
+That means:
+- test it on real tasks
+- identify friction
+- simplify where needed
+- only add structure that proves its value
+- defer tool-specific adapters until the portable core is stable
+
+## Current status
+
+pstack is being tightened into a coherent v0.1 framework.
+
+The current priority is:
+1. clarify the backbone
+2. reduce overlap
+3. improve navigation
+4. make the minimum workflow clean
+5. test it on real work

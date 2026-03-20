@@ -31,8 +31,9 @@ They are behaviours you invoke when needed.
 
 Modules are typically used after:
 
-1. A task has been defined using the task brief
-2. A plan has been created
+1. An idea has been shaped into a usable task, if needed
+2. A task has been defined using the task brief
+3. A plan has been created
 
 At that point, modules are used to execute the work.
 
@@ -48,11 +49,12 @@ You can:
 
 For most tasks, use this sequence:
 
-1. Clarifier  
-2. Planner  
-3. Implementer  
-4. Reviewer  
-5. Verifier  
+1. Idea Processor (optional)
+2. Clarifier  
+3. Planner  
+4. Implementer  
+5. Reviewer  
+6. Verifier  
 
 Not every task needs every module, but most meaningful work should include:
 
@@ -62,6 +64,14 @@ Not every task needs every module, but most meaningful work should include:
 ---
 
 ## When to use each module
+
+### Idea Processor
+Use when:
+- you are starting with a rough idea rather than a task
+- the opportunity is interesting but not yet usable
+- you want to package messy thinking into a cleaner starting point
+
+---
 
 ### Clarifier
 Use when:
