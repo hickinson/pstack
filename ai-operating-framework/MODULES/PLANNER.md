@@ -53,8 +53,5 @@ Return:
 - risks or uncertainties
 - suggested review or validation points
 
-Task:
-[insert task or task brief]
-
-Context:
-[Optional research output]
+Task brief:
+[Insert the cleaned task brief here, including objective, context, constraints, and desired outcome]
