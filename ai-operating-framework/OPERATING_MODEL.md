@@ -104,6 +104,9 @@ Examples:
 - Plan
 - Review record
 - Delivery output
+- Current state assessment
+- Opportunity register
+- Proposal or recommendation
 
 Templates ensure:
 - work is not purely conversational
@@ -139,15 +142,44 @@ Work flows through the system in stages.
 
 The detailed stages are defined in `WORKFLOW_STAGES.md`.
 
-For practical use, pstack v0.1 uses a simplified flow:
+For practical use, pstack v0.1 now supports two simplified lanes:
+
+### Discovery lane
+
+**Idea → Assess → Register → Recommend → Decide**
+
+Use this when the work is still exploratory and the immediate goal is to understand the current state, identify opportunities, and form a recommendation.
+
+### Build lane
 
 **Idea → Brief → Plan → Build → Review → Verify → Deliver**
+
+Use this when the task is already clear enough to define, plan, execute, review, and verify.
 
 ---
 
 ## Minimum usable workflow
 
-For most tasks, the following flow is sufficient:
+For most tasks, one of the following flows is sufficient.
+
+### Discovery-first work
+
+1. Capture and refine the idea when needed  
+   → `TEMPLATES/IDEA_CAPTURE_TEMPLATE.md`  
+   → `MODULES/IDEA_PROCESSOR.md`
+
+2. Assess the current state  
+   → `TEMPLATES/CURRENT_STATE_ASSESSMENT_TEMPLATE.md`
+
+3. Register the opportunities  
+   → `TEMPLATES/OPPORTUNITY_REGISTER_TEMPLATE.md`
+
+4. Form a recommendation  
+   → `TEMPLATES/PROPOSAL_RECOMMENDATION_TEMPLATE.md`
+
+5. Decide whether to stop, iterate, or move into delivery work
+
+### Build-ready work
 
 1. Capture and refine the idea when needed  
    → `TEMPLATES/IDEA_CAPTURE_TEMPLATE.md`  
@@ -170,9 +202,11 @@ For most tasks, the following flow is sufficient:
    → `MODULES/VERIFIER.md`  
    → `CHECKLISTS/VERIFICATION_CHECKLIST.md`
 
-7. Deliver or revise  
+7. Deliver or revise
 
-This is the core operating loop.
+A piece of work may move from the discovery lane into the build lane.
+
+That is expected.
 
 ---
 
