@@ -59,19 +59,34 @@ Use this path when running a real task through pstack:
 
 1. If starting with a rough idea, use `ai-operating-framework/TEMPLATES/IDEA_CAPTURE_TEMPLATE.md`
 2. Refine the idea with `ai-operating-framework/MODULES/IDEA_PROCESSOR.md`
-3. Create a task brief with `ai-operating-framework/TEMPLATES/TASK_BRIEF_TEMPLATE.md`
-4. Create a plan with `ai-operating-framework/TEMPLATES/PLAN_TEMPLATE.md`
-5. Invoke the relevant modules from `ai-operating-framework/MODULES/`
-6. Review the output using `ai-operating-framework/CHECKLISTS/REVIEW_CHECKLIST.md`
-7. Verify the output using `ai-operating-framework/CHECKLISTS/VERIFICATION_CHECKLIST.md`
-8. Deliver or revise
-9. Capture reusable learning if the task produced a useful pattern
+3. Decide whether the work belongs in the discovery lane or the build lane
+4. If the work is still exploratory, use discovery templates such as:
+   - `ai-operating-framework/TEMPLATES/CURRENT_STATE_ASSESSMENT_TEMPLATE.md`
+   - `ai-operating-framework/TEMPLATES/OPPORTUNITY_REGISTER_TEMPLATE.md`
+   - `ai-operating-framework/TEMPLATES/PROPOSAL_RECOMMENDATION_TEMPLATE.md`
+5. If the task is already clear enough to execute, create a task brief with `ai-operating-framework/TEMPLATES/TASK_BRIEF_TEMPLATE.md`
+6. Create a plan with `ai-operating-framework/TEMPLATES/PLAN_TEMPLATE.md`
+7. Invoke the relevant modules from `ai-operating-framework/MODULES/`
+8. Review the output using `ai-operating-framework/CHECKLISTS/REVIEW_CHECKLIST.md`
+9. Verify the output using `ai-operating-framework/CHECKLISTS/VERIFICATION_CHECKLIST.md`
+10. Deliver or revise
+11. Capture reusable learning if the task produced a useful pattern
 
-## Minimum usable workflow
+## Minimum usable workflows
 
-For v0.1, the default pstack workflow is:
+For v0.1, pstack now supports two practical lanes:
+
+### Discovery lane
+
+**Idea → Assess → Register → Recommend → Decide**
+
+Use this when the work is still exploratory and you need to understand the current state, capture opportunities, and form a recommendation before delivery work begins.
+
+### Build lane
 
 **Idea → Brief → Plan → Build → Review → Verify → Deliver**
+
+Use this when the task is already clear enough to define, plan, and execute.
 
 If the task is already clear, you can skip the idea step and start at the brief.
 
@@ -117,6 +132,9 @@ These are useful, but not part of the tightest operating spine:
 
 - `ai-operating-framework/TEMPLATES/DELIVERY_TEMPLATE.md`
 - `ai-operating-framework/TEMPLATES/DECISION_LOG_TEMPLATE.md`
+- `ai-operating-framework/TEMPLATES/CURRENT_STATE_ASSESSMENT_TEMPLATE.md`
+- `ai-operating-framework/TEMPLATES/OPPORTUNITY_REGISTER_TEMPLATE.md`
+- `ai-operating-framework/TEMPLATES/PROPOSAL_RECOMMENDATION_TEMPLATE.md`
 - `ai-operating-framework/CHECKLISTS/PROFESSIONAL_SAFETY_CHECKLIST.md`
 - `ai-operating-framework/CHECKLISTS/WEEKLY_OPERATING_RHYTHM.md`
 - deeper use of `ai-operating-framework/ENTERPRISE_ADAPTER.md`
