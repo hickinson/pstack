@@ -19,7 +19,7 @@ IDEA → DISCOVERY → BASELINED → INVESTIGATING → OPTIONS_READY → PROPOSA
 Every active engagement must visibly record:
 
 - current lifecycle state;
--- next action;
+- next action;
 - accountable owner;
 - event trigger or review date.
 

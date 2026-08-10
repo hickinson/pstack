@@ -90,15 +90,19 @@ delivery hand-back
 pstack-learn
 ```
 
-`pstack-manage` is cross-cutting. Use it whenever you need to:
+Each lifecycle skill must leave the engagement state truthful and usable. When the project workspace is writable, the skill should create or update `.pstack/engagement.json`; otherwise it should return the exact state values that need to be written.
 
-- create or inspect engagement state;
+This keeps current state, accountable owner, next action and checkpoint from being lost between capabilities.
+
+`pstack-manage` is cross-cutting, but it is not a mandatory extra ceremony between every lifecycle skill. Use it when you need to:
+
+- create, inspect or repair engagement state explicitly;
 - check lifecycle health;
-- validate a transition;
-- record approval;
+- validate a disputed or consequential transition;
+- record or verify approval;
 - hand work to delivery;
 - accept delivery hand-back;
-- establish a benefit-review checkpoint.
+- establish or repair a benefit-review checkpoint.
 
 ## Delivery is deliberately external
 

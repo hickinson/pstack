@@ -31,6 +31,8 @@ Every active engagement must have:
 
 If any required field is missing, report the engagement as **unhealthy** and identify the smallest corrective action.
 
+The lifecycle skills themselves must preserve this state continuity. `pstack-manage` is the explicit validator and repair/control skill; it is not a ritual that users should have to invoke between every successful lifecycle capability.
+
 ## Lifecycle
 
 Use only these states:
@@ -155,6 +157,8 @@ Keep the state file small. Do not add:
 - technical delivery backlog.
 
 Git history already records changes to the state file.
+
+When another pstack lifecycle skill has completed successfully, validate the state it leaves behind rather than requiring a redundant second ceremony. If the skill could not safely write project state, apply or return the smallest exact state-file update needed.
 
 ## Delivery hand-back
 
