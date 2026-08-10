@@ -1,186 +1,164 @@
 # pstack
 
-pstack is a portable AI operating framework for structuring work in a more repeatable, AI-native, and tool-agnostic way.
+pstack is an AI-assisted technology solution lifecycle system that turns poorly defined problems into evidence-based, commercially credible and implementable solution proposals; hands approved solutions cleanly into delivery; and verifies whether the promised benefits were actually realised.
 
-It is designed to help turn ad hoc prompting into a practical workflow that can be used across personal work, professional work, and more constrained enterprise environments over time.
+## Start here
 
-## What pstack is
+If you have a raw idea, client request, pain point, opportunity or proposed technology solution, start with **`pstack-discover`**.
 
-pstack is:
-- a workflow-first operating framework
-- a lightweight repository of reusable patterns for AI-assisted work
-- a portable core with context-specific overlays
-- a practical system for moving from idea to delivery with clearer structure, review, and verification
-- a foundation for future tool-specific adapters without being trapped inside one tool
+Do not hunt through prompts or templates first. The skill should help separate the real problem from the proposed solution, establish what is known, expose missing evidence and create the first useful engagement artefact.
 
-## What pstack is not
+## Lifecycle
 
-pstack is not:
-- a giant prompt library
-- a monolithic autonomous agent system
-- a tool-specific framework
-- a replacement for human judgement
-- a reason to add process where none is needed
-- a complete enterprise governance model
+```text
+IDEA → DISCOVERY → BASELINED → INVESTIGATING → OPTIONS_READY → PROPOSAL
+     → APPROVED → IMPLEMENTATION_READY → BUILDING → LIVE
+     → BENEFIT_REVIEW → CLOSED / ITERATE
+```
 
-## The v0.1 backbone
+Every active engagement must visibly record:
 
-These files form the real operating spine of pstack v0.1:
+- current lifecycle state;
+-- next action;
+- accountable owner;
+- event trigger or review date.
 
-1. `ai-operating-framework/DESIGN_PHILOSOPHY.md`
-2. `ai-operating-framework/OPERATING_MODEL.md`
-3. `ai-operating-framework/WORKFLOW_STAGES.md`
-4. `ai-operating-framework/QUALITY_GATES.md`
-5. `ai-operating-framework/TEMPLATES/TASK_BRIEF_TEMPLATE.md`
-6. `ai-operating-framework/TEMPLATES/PLAN_TEMPLATE.md`
-7. `ai-operating-framework/CHECKLISTS/REVIEW_CHECKLIST.md`
-8. `ai-operating-framework/CHECKLISTS/VERIFICATION_CHECKLIST.md`
+An active engagement without a next checkpoint is unhealthy.
 
-If pstack works in practice, it will be because these files work together.
+## Six capabilities
 
-## Reading path
+### DISCOVER
 
-Use this reading path if you are new to pstack:
+Turn a vague problem or opportunity into a well-framed, evidence-seeking current-state assessment and baseline.
 
-1. `ai-operating-framework/DESIGN_PHILOSOPHY.md`
-2. `ai-operating-framework/OPERATING_MODEL.md`
-3. `ai-operating-framework/WORKFLOW_STAGES.md`
-4. `ai-operating-framework/QUALITY_GATES.md`
-5. Choose the relevant overlay:
-   - `ai-operating-framework/PERSONAL_OVERLAY.md`
-   - `ai-operating-framework/PROFESSIONAL_OVERLAY.md`
-   - `ai-operating-framework/ENTERPRISE_ADAPTER.md`
-6. Read `ai-operating-framework/MODULES/README.md`
-7. Use the templates and checklists on a real task
+### INVESTIGATE
 
-## Usage path
+Establish what already exists and what can be configured, extended, integrated, bought or reused before bespoke build is considered.
 
-Use this path when running a real task through pstack:
+### DESIGN
 
-1. If starting with a rough idea, use `ai-operating-framework/TEMPLATES/IDEA_CAPTURE_TEMPLATE.md`
-2. Refine the idea with `ai-operating-framework/MODULES/IDEA_PROCESSOR.md`
-3. Decide whether the work belongs in the discovery lane or the build lane
-4. If the work is still exploratory, use discovery templates such as:
-   - `ai-operating-framework/TEMPLATES/CURRENT_STATE_ASSESSMENT_TEMPLATE.md`
-   - `ai-operating-framework/TEMPLATES/OPPORTUNITY_REGISTER_TEMPLATE.md`
-   - `ai-operating-framework/TEMPLATES/PROPOSAL_RECOMMENDATION_TEMPLATE.md`
-5. If the task is already clear enough to execute, create a task brief with `ai-operating-framework/TEMPLATES/TASK_BRIEF_TEMPLATE.md`
-6. Create a plan with `ai-operating-framework/TEMPLATES/PLAN_TEMPLATE.md`
-7. Invoke the relevant modules from `ai-operating-framework/MODULES/`
-8. Review the output using `ai-operating-framework/CHECKLISTS/REVIEW_CHECKLIST.md`
-9. Verify the output using `ai-operating-framework/CHECKLISTS/VERIFICATION_CHECKLIST.md`
-10. Deliver or revise
-11. Capture reusable learning if the task produced a useful pattern
+Create materially different solution options, model benefits, costs and risks, challenge assumptions and recommend the best-fit approach.
 
-## Minimum usable workflows
+### PROPOSE
 
-For v0.1, pstack now supports two practical lanes:
+Convert the reasoning into a client-quality, commercially credible and technically implementable proposal, followed by a clean implementation handoff when approved.
 
-### Discovery lane
+### MANAGE
 
-**Idea → Assess → Register → Recommend → Decide**
+Maintain lifecycle state, enforce handoff gates, ensure next actions and checkpoints exist, accept delivery hand-back and trigger benefit reviews.
 
-Use this when the work is still exploratory and you need to understand the current state, capture opportunities, and form a recommendation before delivery work begins.
+### LEARN
 
-### Build lane
+Compare estimated versus actual delivery cost, time and benefit, explain variance and retain lessons that improve future work.
 
-**Idea → Brief → Plan → Build → Review → Verify → Deliver**
+## Delivery boundary
 
-Use this when the task is already clear enough to define, plan, and execute.
+pstack owns:
 
-If the task is already clear, you can skip the idea step and start at the brief.
+```text
+DISCOVER → INVESTIGATE → DESIGN → PROPOSE → HANDOFF
+```
+
+It delegates:
+
+```text
+BUILD → TEST → SHIP
+```
+
+to the project's normal technical environment, such as VS Code, GitHub, Copilot, Codex, Claude Code and/or gstack where useful.
+
+pstack then resumes ownership for:
+
+```text
+BENEFIT REVIEW → LEARN
+```
+
+pstack does not recreate a coding-agent platform or software factory.
+
+## Information boundary
+
+**pstack contains methods. Projects contain context. Credential stores contain access.**
+
+This public repository contains only generic reusable methods, schemas, templates and examples.
+
+Client, employer and project-specific information belongs in the relevant project, repository or workspace. Secrets do not belong in pstack.
+
+## Engagement state
+
+Projects using pstack should keep a small repository-native state record, normally:
+
+```text
+.pstack/engagement.json
+```
+
+`pstack-manage` owns the state contract and lifecycle-transition rules.
+
+No database, bespoke UI or MCP dependency is required for the MVP.
+
+## Agent Skills
+
+pstack v2 is expressed as six portable Agent Skills:
+
+```text
+skills/
+├── pstack-discover/
+├── pstack-investigate/
+├── pstack-design/
+├── pstack-propose/
+├── pstack-manage/
+└── pstack-learn/
+```
+
+Each skill encodes a distinctive pstack method rather than a generic AI persona. Supporting templates or reference material live with the skill that owns them.
+
+See [`docs/USING_PSTACK.md`](docs/USING_PSTACK.md) for practical usage and host placement guidance.
+
+## Governing contract
+
+[`CONTRACT.md`](CONTRACT.md) is the authoritative pstack v2 design contract.
+
+Where the existing v1 material conflicts with that contract, the v2 contract wins.
 
 ## Repository structure
 
 ```text
 pstack/
 ├── README.md
+├── CONTRACT.md
+├── skills/
+│   ├── pstack-discover/
+│   ├── pstack-investigate/
+│   ├── pstack-design/
+│   ├── pstack-propose/
+│   ├── pstack-manage/
+│   └── pstack-learn/
+├── docs/
+│   └── USING_PSTACK.md
 └── ai-operating-framework/
-    ├── DESIGN_PHILOSOPHY.md
-    ├── OPERATING_MODEL.md
-    ├── WORKFLOW_STAGES.md
-    ├── QUALITY_GATES.md
-    ├── PERSONAL_OVERLAY.md
-    ├── PROFESSIONAL_OVERLAY.md
-    ├── ENTERPRISE_ADAPTER.md
-    ├── MODULES/
-    │   ├── README.md
-    │   └── *.md
-    ├── TEMPLATES/
-    │   └── *.md
-    └── CHECKLISTS/
-        └── *.md
+    └── ...v1 retained temporarily during controlled migration...
 ```
 
-## Essential for v0.1
+## v1 migration status
 
-These matter most right now:
+The existing `ai-operating-framework/` is retained temporarily during the controlled v1 → v2 refactor so that the replacement can be reviewed against the current implementation.
 
-- `ai-operating-framework/DESIGN_PHILOSOPHY.md`
-- `ai-operating-framework/OPERATING_MODEL.md`
-- `ai-operating-framework/WORKFLOW_STAGES.md`
-- `ai-operating-framework/QUALITY_GATES.md`
-- `ai-operating-framework/TEMPLATES/TASK_BRIEF_TEMPLATE.md`
-- `ai-operating-framework/TEMPLATES/PLAN_TEMPLATE.md`
-- `ai-operating-framework/CHECKLISTS/REVIEW_CHECKLIST.md`
-- `ai-operating-framework/CHECKLISTS/VERIFICATION_CHECKLIST.md`
-- the core module files in `ai-operating-framework/MODULES/`
+It is **not** the v2 design authority and should not be extended with new v1 modules, overlays, checklists or generic prompts.
 
-## Secondary for v0.1
-
-These are useful, but not part of the tightest operating spine:
-
-- `ai-operating-framework/TEMPLATES/DELIVERY_TEMPLATE.md`
-- `ai-operating-framework/TEMPLATES/DECISION_LOG_TEMPLATE.md`
-- `ai-operating-framework/TEMPLATES/CURRENT_STATE_ASSESSMENT_TEMPLATE.md`
-- `ai-operating-framework/TEMPLATES/OPPORTUNITY_REGISTER_TEMPLATE.md`
-- `ai-operating-framework/TEMPLATES/PROPOSAL_RECOMMENDATION_TEMPLATE.md`
-- `ai-operating-framework/CHECKLISTS/PROFESSIONAL_SAFETY_CHECKLIST.md`
-- `ai-operating-framework/CHECKLISTS/WEEKLY_OPERATING_RHYTHM.md`
-- deeper use of `ai-operating-framework/ENTERPRISE_ADAPTER.md`
-- more advanced documentation and capture patterns
-
-## Current v0.1 focus
-
-The goal of v0.1 is not to expand pstack.
-
-The goal is to make it:
-- coherent
-- opinionated
-- usable in day-to-day work
-- portable across tools
-- simple enough to evolve through real usage
+Once the v2 vertical slice has been validated, superseded v1 material can be deleted in a separate controlled change. Git history is the archive.
 
 ## Design stance
 
-pstack follows a few strong rules:
+pstack deliberately prefers:
 
-- workflow first
-- durable principles over tool tricks
-- one core, multiple overlays
-- modules as reusable behaviours
-- evidence before completion
-- human judgement at meaningful boundaries
-- simplification over documentation theatre
-
-## How pstack should evolve
-
-pstack should evolve through real use.
-
-That means:
-- test it on real tasks
-- identify friction
-- simplify where needed
-- only add structure that proves its value
-- defer tool-specific adapters until the portable core is stable
-
-## Current status
-
-pstack is being tightened into a coherent v0.1 framework.
-
-The current priority is:
-1. clarify the backbone
-2. reduce overlap
-3. improve navigation
-4. make the minimum workflow clean
-5. test it on real work
+- problem before solution;
+- search before building;
+- reuse before reinventing;
+- evidence before assertion;
+- options before commitment;
+- recommendation rather than mere listing;
+- measurement before promising;
+- handoff before implementation;
+- verification after shipping;
+- learning before repeating;
+- human accountability for consequential decisions;
+- repository-native state and boring technology over unnecessary infrastructure.

@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/hickinson/pstack/main/skills/pstack-manage/references/engagement-state.schema.json",
+  "title": "pstack engagement state",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "engagement_id",
+    "title",
+    "state",
+    "owner",
+    "updated_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "engagement_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "IDEA",
+        "DISCOVERY",
+        "BASELINED",
+        "INVESTIGATING",
+        "OPTIONS_READY",
+        "PROPOSAL",
+        "APPROVED",
+        "IMPLEMENTATION_READY",
+        "BUILDING",
+        "LIVE",
+        "BENEFIT_REVIEW",
+        "CLOSED",
+        "ITERATE"
+      ]
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "next_action": {
+      "type": "string",
+      "minLength": 1
+    },
+    "checkpoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "value"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "review_date",
+            "event"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "review_date"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "type": "string",
+                "format": "date"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "state": {
+            "not": {
+              "const": "CLOSED"
+            }
+          }
+        },
+        "required": [
+          "state"
+        ]
+      },
+      "then": {
+        "required": [
+          "next_action",
+          "checkpoint"
+        ]
+      }
+    }
+  ]
+}
