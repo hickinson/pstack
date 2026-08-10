@@ -25,6 +25,8 @@ Every active engagement must visibly record:
 
 An active engagement without a next checkpoint is unhealthy.
 
+The lifecycle is stable, but the depth of analysis and artefacts is proportional to consequence, uncertainty, cost and stakeholder complexity. Proportionality reduces ceremony; it does not bypass gates.
+
 ## Six capabilities
 
 ### DISCOVER
@@ -33,7 +35,7 @@ Turn a vague problem or opportunity into a well-framed, evidence-seeking current
 
 ### INVESTIGATE
 
-Establish what already exists and what can be configured, extended, integrated, bought or reused before bespoke build is considered.
+Establish what already exists and what can be configured, extended, integrated, bought or reused before bespoke build is considered. Reuse candidates must be assessed for fit and inherited debt rather than assumed suitable merely because they already exist.
 
 ### DESIGN
 
@@ -41,7 +43,7 @@ Create materially different solution options, model benefits, costs and risks, c
 
 ### PROPOSE
 
-Convert the reasoning into a client-quality, commercially credible and technically implementable proposal, followed by a clean implementation handoff when approved.
+Convert the reasoning into a decision-quality, technically implementable proposition whose commercial depth is proportionate to the engagement, followed by a clean implementation handoff when explicitly approved.
 
 ### MANAGE
 
@@ -49,7 +51,7 @@ Maintain lifecycle state, enforce handoff gates, ensure next actions and checkpo
 
 ### LEARN
 
-Compare estimated versus actual delivery cost, time and benefit, explain variance and retain lessons that improve future work.
+Compare estimated or expected outcomes with actual delivery cost, time, adoption and benefit where material, explain variance and retain lessons that improve future work.
 
 ## Delivery boundary
 
@@ -79,7 +81,7 @@ pstack does not recreate a coding-agent platform or software factory.
 
 **pstack contains methods. Projects contain context. Credential stores contain access.**
 
-This public repository contains only generic reusable methods, schemas, templates and examples.
+This public repository contains only generic reusable methods, schemas, templates, examples and behavioural evaluations.
 
 Client, employer and project-specific information belongs in the relevant project, repository or workspace. Secrets do not belong in pstack.
 
@@ -97,7 +99,7 @@ No database, bespoke UI or MCP dependency is required for the MVP.
 
 ## Agent Skills
 
-pstack v2 is expressed as six portable Agent Skills:
+pstack is expressed as six portable Agent Skills:
 
 ```text
 skills/
@@ -115,7 +117,7 @@ See [`docs/USING_PSTACK.md`](docs/USING_PSTACK.md) for practical usage and host 
 
 ## Evaluation
 
-`evals/` contains small synthetic scenario-and-rubric tests for the behaviours pstack must preserve, including problem framing, reuse-before-build, commercial evidence, state continuity and the delivery return path.
+`evals/` contains small synthetic scenario-and-rubric tests for the behaviours pstack must preserve, including problem framing, reuse-before-build, commercial evidence, proportionality, state continuity and the delivery return path.
 
 They are behavioural regression checks rather than exact-output tests. Run them manually while the method is still stabilising; automate only when repeated use proves the rubric is stable enough to justify an eval harness.
 
@@ -123,9 +125,7 @@ See [`evals/README.md`](evals/README.md).
 
 ## Governing contract
 
-[`CONTRACT.md`](CONTRACT.md) is the authoritative pstack v2 design contract.
-
-Where the existing v1 material conflicts with that contract, the v2 contract wins.
+[`CONTRACT.md`](CONTRACT.md) is the authoritative pstack design contract.
 
 ## Repository structure
 
@@ -143,19 +143,11 @@ pstack/
 ├── evals/
 │   ├── README.md
 │   └── scenarios/
-├── docs/
-│   └── USING_PSTACK.md
-└── ai-operating-framework/
-    └── ...v1 retained temporarily during controlled migration...
+└── docs/
+    └── USING_PSTACK.md
 ```
 
-## v1 migration status
-
-The existing `ai-operating-framework/` is retained temporarily during the controlled v1 → v2 refactor so that the replacement can be reviewed against the current implementation.
-
-It is **not** the v2 design authority and should not be extended with new v1 modules, overlays, checklists or generic prompts.
-
-Once the v2 vertical slice has been validated, superseded v1 material can be deleted in a separate controlled change. Git history is the archive.
+Git history is the archive for superseded designs; the active tree contains only the current method.
 
 ## Design stance
 
@@ -163,10 +155,11 @@ pstack deliberately prefers:
 
 - problem before solution;
 - search before building;
-- reuse before reinventing;
+- reuse before reinventing, with fit and inherited debt assessed explicitly;
 - evidence before assertion;
 - options before commitment;
 - recommendation rather than mere listing;
+- proportional rigour rather than fixed ceremony;
 - measurement before promising;
 - handoff before implementation;
 - verification after shipping;
