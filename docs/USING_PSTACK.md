@@ -94,6 +94,8 @@ Each lifecycle skill must leave the engagement state truthful and usable. When t
 
 This keeps current state, accountable owner, next action and checkpoint from being lost between capabilities.
 
+Do not invent ownership to make a state file look complete. If no real accountable person is known, the engagement is unhealthy until one is assigned.
+
 `pstack-manage` is cross-cutting, but it is not a mandatory extra ceremony between every lifecycle skill. Use it when you need to:
 
 - create, inspect or repair engagement state explicitly;
@@ -156,9 +158,11 @@ Avoid copying large evidence packs into pstack lifecycle documents.
 
 For any state other than `CLOSED`, `.pstack/engagement.json` should contain:
 
-- owner;
+- a real accountable owner;
 - next action;
 - checkpoint.
+
+A placeholder owner does not make an engagement healthy.
 
 A checkpoint is either:
 
@@ -180,6 +184,16 @@ or:
 
 If one of those elements is missing, use `pstack-manage` to repair the engagement before adding more process.
 
+### Checkpoints versus reminders
+
+The checkpoint in project state is portable truth. It does not by itself send a notification.
+
+When the current host already has a native reminder, scheduled task or condition-watch capability, `pstack-manage` should use or offer it when that would materially reduce the chance of a checkpoint being forgotten. The project checkpoint remains authoritative even if a reminder is created elsewhere.
+
+If the host has no suitable native mechanism, pstack should say plainly that the checkpoint is recorded but no active reminder has been created.
+
+Do not introduce a pstack-specific scheduler or MCP dependency just to solve reminders.
+
 ## Human approval
 
 The AI may prepare and challenge the proposal.
@@ -199,6 +213,14 @@ Use the security, data, access and approval controls of the client or employer e
 pstack does not weaken those controls and does not make an external integration acceptable merely because an AI tool can technically access it.
 
 Use least privilege and minimise data shared with AI systems.
+
+## Evaluating pstack
+
+The `evals/` directory contains synthetic scenario-and-rubric checks for the behaviours that matter most.
+
+Use them as behavioural regression tests, not exact-answer tests. A model may format an answer differently and still pass; it must not bypass evidence, reuse, approval, state or return-path rules.
+
+See [`../evals/README.md`](../evals/README.md) for the manual evaluation method.
 
 ## Finishing the loop
 
