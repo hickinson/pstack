@@ -1,6 +1,6 @@
 ---
 name: pstack-discover
-description: Turn a raw technology-related client problem, pain point, opportunity or proposed solution into an evidence-seeking problem definition, current-state assessment and measurable baseline. Use when an engagement is at IDEA or DISCOVERY, when someone says they need an app, automation, AI, integration or system change before the underlying problem is proven, or when current process, evidence, stakeholders, constraints and baseline measures are unclear.
+description: Turn a raw technology-related client problem, pain point, opportunity or proposed solution into an evidence-seeking problem definition, current-state assessment and measurable baseline. Use when an engagement is at IDEA or DISCOVERY, when someone asks what app, automation, AI, integration or system should be built before the underlying problem and baseline are proven, or when current process, evidence, stakeholders, constraints and baseline measures are unclear. While material baseline evidence is missing, stop at discovery and do not produce a solution architecture, feature backlog or build plan.
 ---
 
 # pstack-discover
@@ -116,11 +116,46 @@ over:
 
 ### 7. Decide discovery status
 
-Use `assets/discovery.md` for the durable output.
+Use `assets/discovery.md` as a template for the durable project output.
 
 Recommend `BASELINED` only when there is enough evidence to support meaningful investigation and later benefit reasoning.
 
 Otherwise keep the state at `DISCOVERY` and define the exact next evidence action.
+
+## Stage boundary — hard stop
+
+`DISCOVERY` is not permission to design the solution while adding a caveat that more evidence is needed.
+
+If material baseline evidence is still missing, do **not** provide:
+
+- a target solution architecture;
+- a product or platform blueprint;
+- a feature list or prioritised backlog;
+- a vendor/product shortlist;
+- a phased build or implementation plan;
+- solution-specific technology choices;
+- invented KPI targets or benefit claims.
+
+This applies even when the user explicitly asks "what should we build?" or asks for a roadmap. Explain that solution design is premature, state what must be learned next, and stop at the discovery output.
+
+A previous discovery note does not remove this boundary. If its baseline status is partial or insufficient, remain in `DISCOVERY`.
+
+Detailed solution investigation belongs to `pstack-investigate`; materially different solution options belong to `pstack-design`.
+
+## Artefact location and template safety
+
+Files inside the installed skill are reusable method assets, not project working documents.
+
+Treat `assets/discovery.md` as a read-only template. Never write project/client content back into:
+
+- `.github/skills/`;
+- `.agents/skills/`;
+- `.claude/skills/`;
+- the canonical pstack `skills/` tree.
+
+When the project workspace is writable, create or update the project-side discovery artefact in the project's normal documentation location, normally `docs/pstack/discovery.md`, or an equivalent established project path.
+
+Do not mutate the installed skill to record an engagement.
 
 ## Lifecycle continuity
 
@@ -133,7 +168,11 @@ At the end of the work, determine and return:
 - one concrete next action;
 - one checkpoint: review date or triggering event.
 
-If the project workspace is writable and pstack is operating on that project, create or update `.pstack/engagement.json` to reflect reality. If it cannot be updated safely, return the exact state-file values that should be written.
+Never invent an accountable owner or use a placeholder as though it were valid state. If no real accountable person is known, report the engagement as unhealthy, make owner assignment the smallest corrective action, and keep that gap explicit until a person is actually assigned.
+
+If the project workspace is writable and pstack is operating on that project, create or update `.pstack/engagement.json` to reflect reality. The state contract may represent an unresolved owner as `null`; that is explicitly unhealthy until a real accountable person is assigned. Do not use strings such as `TBD`, `unknown` or `unassigned` merely to satisfy the schema.
+
+If state cannot be updated safely, return the exact state-file values that should be written.
 
 The user should not have to remember to invoke `pstack-manage` merely to preserve lifecycle continuity.
 
@@ -152,4 +191,4 @@ A good discovery output makes these questions answerable:
 
 Do not design solution options in depth during DISCOVER.
 
-Initial opportunities may be noted, but detailed solution investigation belongs to `pstack-investigate`.
+Initial opportunities may be noted only as hypotheses; do not turn them into a build recommendation before investigation and design.

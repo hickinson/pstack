@@ -113,6 +113,14 @@ Each skill encodes a distinctive pstack method rather than a generic AI persona.
 
 See [`docs/USING_PSTACK.md`](docs/USING_PSTACK.md) for practical usage and host placement guidance.
 
+## Evaluation
+
+`evals/` contains small synthetic scenario-and-rubric tests for the behaviours pstack must preserve, including problem framing, reuse-before-build, commercial evidence, state continuity and the delivery return path.
+
+They are behavioural regression checks rather than exact-output tests. Run them manually while the method is still stabilising; automate only when repeated use proves the rubric is stable enough to justify an eval harness.
+
+See [`evals/README.md`](evals/README.md).
+
 ## Governing contract
 
 [`CONTRACT.md`](CONTRACT.md) is the authoritative pstack v2 design contract.
@@ -132,6 +140,9 @@ pstack/
 │   ├── pstack-propose/
 │   ├── pstack-manage/
 │   └── pstack-learn/
+├── evals/
+│   ├── README.md
+│   └── scenarios/
 ├── docs/
 │   └── USING_PSTACK.md
 └── ai-operating-framework/
