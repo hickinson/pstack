@@ -1,0 +1,13 @@
+{
+  "schema_version": "2.0",
+  "engagement_id": "example-engagement",
+  "title": "Example engagement",
+  "state": "DISCOVERY",
+  "owner": "Named accountable person",
+  "next_action": "Establish current process-volume baseline",
+  "checkpoint": {
+    "type": "review_date",
+    "value": "2026-08-17"
+  },
+  "updated_at": "2026-08-10"
+}
