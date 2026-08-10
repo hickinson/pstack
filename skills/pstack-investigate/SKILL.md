@@ -97,6 +97,16 @@ For each serious candidate, consider:
 - delivery risk;
 - material limitations.
 
+For inherited codebases, templates or copied project structures, also inspect:
+
+- obsolete or unnecessary dependencies;
+- hidden assumptions about hosting, domains, credentials or workflows;
+- inherited features and data structures that do not fit the new problem;
+- maintenance and upgrade burden;
+- cleanup, migration or de-risking effort needed before the reused asset becomes a good fit.
+
+Existing code is evidence of availability, not evidence of suitability. Reuse is not automatically cheaper merely because the code already exists.
+
 ### 4. Record rejected candidates
 
 Rejection evidence matters.
