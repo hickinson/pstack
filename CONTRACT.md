@@ -22,6 +22,7 @@ It is intended primarily for technology-led process improvement through software
 - Handoff before implementation.
 - Verify after shipping.
 - Learn before repeating.
+- Apply rigour proportionately to consequence, uncertainty, cost and stakeholder complexity.
 - Human accountability for consequential decisions.
 - Prefer simple, inspectable and portable mechanisms over bespoke infrastructure.
 
@@ -40,6 +41,12 @@ It may be used for:
 - data and analytics solutions;
 - operating-model changes coupled to technology;
 - buying or reusing suitable products, services, libraries, patterns or open source.
+
+The lifecycle is stable, but the depth of analysis and artefacts is not fixed.
+
+Low-risk personal, exploratory or small internal projects may satisfy adjacent lifecycle gates in the same interaction and may use concise decision records instead of formal proposal packs. Client-facing, high-cost, regulated, security-sensitive or otherwise consequential work requires deeper evidence and more durable records.
+
+Proportionality may reduce ceremony. It must not bypass material evidence, meaningful option comparison, explicit human approval, implementation handoff or benefit review.
 
 ## 4. Delivery boundary
 
@@ -97,12 +104,12 @@ IDEA → DISCOVERY → BASELINED → INVESTIGATING → OPTIONS_READY → PROPOSA
 - **BASELINED** — sufficient evidence exists to describe the current state and meaningful measures.
 - **INVESTIGATING** — existing capabilities, products, integrations and reusable components are being examined.
 - **OPTIONS_READY** — materially different options have been compared and a recommendation exists.
-- **PROPOSAL** — a client-quality proposition exists and awaits a decision.
+- **PROPOSAL** — a decision-quality proposition or decision record exists and awaits a decision.
 - **APPROVED** — an accountable human has explicitly approved the selected approach.
 - **IMPLEMENTATION_READY** — the approved solution has an actionable technical handoff.
 - **BUILDING** — delivery has accepted ownership and implementation is underway.
 - **LIVE** — the solution is in use and delivery has handed actual results back to pstack.
-- **BENEFIT_REVIEW** — actual outcomes are being compared with the business case.
+- **BENEFIT_REVIEW** — actual outcomes are being compared with the business case or expected outcomes.
 - **CLOSED** — the engagement has completed and no further iteration is currently justified.
 - **ITERATE** — further change is justified and the engagement has an explicit re-entry action.
 
@@ -140,6 +147,8 @@ Every material investigation should consider, as appropriate:
 
 This is not an absolute hierarchy. Security, fit, licensing, lock-in, supportability, operating model and total cost may justify a different choice.
 
+Reuse is not automatically low-cost or low-risk merely because an asset already exists. Material reuse candidates should be assessed for inherited complexity, obsolete dependencies, hidden assumptions, unwanted behaviour and cleanup or migration cost.
+
 A bespoke-build recommendation without meaningful evidence that alternatives were considered is incomplete.
 
 ### DESIGN
@@ -160,17 +169,19 @@ Variations of the same technical approach do not count as materially different o
 
 ### PROPOSE
 
-Purpose: convert the reasoning into a commercially credible and technically implementable proposition.
+Purpose: convert the reasoning into a decision-quality, technically implementable proposition that is commercially credible where commercial analysis is material.
 
 PROPOSE must:
 
 - retain traceability to evidence and baseline;
 - describe options considered and the recommended approach;
-- express delivery and ongoing costs;
-- express expected value with visible assumptions and confidence;
+- express delivery and ongoing costs where material;
+- express expected value with visible assumptions and confidence where material;
 - define scope, exclusions, risks, dependencies and responsibilities;
 - require explicit human approval before moving to `APPROVED`;
 - create a technical implementation handoff after approval.
+
+Do not manufacture financial ROI, budget precision or stakeholder ceremony when it is not material to the decision. Non-financial outcomes are valid when they are the real reason for the work.
 
 PROPOSE must never self-approve a consequential decision.
 
@@ -194,9 +205,9 @@ An active engagement without a next checkpoint is unhealthy.
 
 ### LEARN
 
-Purpose: compare the business case with actual outcomes and improve future work.
+Purpose: compare the business case or expected outcomes with actual outcomes and improve future work.
 
-LEARN must compare, where available:
+LEARN must compare, where available and material:
 
 - estimated versus actual implementation cost;
 - estimated versus actual duration;
@@ -262,7 +273,7 @@ Transition criteria:
 - **DISCOVERY → BASELINED** — sufficient evidence exists for meaningful investigation and benefit reasoning.
 - **BASELINED → INVESTIGATING** — reuse-first investigation starts.
 - **INVESTIGATING → OPTIONS_READY** — viable materially different options have been compared and a recommendation exists.
-- **OPTIONS_READY → PROPOSAL** — a client-quality proposal exists.
+- **OPTIONS_READY → PROPOSAL** — a decision-quality proposition exists; use a formal client-quality proposal where the context warrants it.
 - **PROPOSAL → APPROVED** — explicit, attributable human approval only.
 - **APPROVED → IMPLEMENTATION_READY** — the implementation handoff is complete enough for delivery to act without reconstructing the proposal conversation.
 - **IMPLEMENTATION_READY → BUILDING** — delivery accepts ownership.
@@ -270,6 +281,8 @@ Transition criteria:
 - **LIVE → BENEFIT_REVIEW** — the agreed review trigger or date has been reached.
 - **BENEFIT_REVIEW → CLOSED** — review is complete and no further iteration is currently justified.
 - **BENEFIT_REVIEW → ITERATE** — further change is justified.
+
+Adjacent states may be reached in one interaction when each gate is genuinely satisfied. This is compression of ceremony, not permission to skip a gate or invent its evidence.
 
 `ITERATE` deliberately has no single hard-coded next state. Its next action should identify the correct re-entry point based on what was learned.
 
@@ -301,7 +314,7 @@ A useful general pattern is:
 baseline × affected volume × expected improvement × unit value = estimated benefit
 ```
 
-Not every benefit is financial, but every material claim should identify:
+Not every benefit is financial, and not every engagement needs a financial model. Every material claim should still identify, as appropriate:
 
 - baseline or current condition;
 - calculation or reasoning;
@@ -319,7 +332,7 @@ Costs should distinguish where relevant:
 - ongoing platform or service cost;
 - ongoing support.
 
-Use ranges when uncertainty is material. Do not invent precision.
+Use ranges when uncertainty is material. Do not invent precision or reverse-engineer an ROI merely to make a small or non-commercial project look like a business case.
 
 ## 12. Human accountability
 
@@ -344,7 +357,8 @@ pstack v2 must not:
 - introduce a database in the MVP;
 - automate consequential human approvals away;
 - claim benefits without appropriate baseline or evidence;
-- duplicate native planning, coding, review, test or release capability without a demonstrated gap.
+- duplicate native planning, coding, review, test or release capability without a demonstrated gap;
+- create enterprise ceremony for low-risk work when a concise decision record is sufficient.
 
 ## 14. Evolution rule
 

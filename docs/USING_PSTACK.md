@@ -61,12 +61,31 @@ Create an artefact when the lifecycle reaches the point where it is useful:
 | DISCOVERY / BASELINED | `discovery.md` |
 | INVESTIGATING | `investigation.md` |
 | OPTIONS_READY | `solution-options.md` |
-| PROPOSAL | `proposal.md` |
+| PROPOSAL | `proposal.md` or concise decision record |
 | APPROVED / IMPLEMENTATION_READY | `implementation-handoff.md` |
 | LIVE | `delivery-handback.md` |
 | BENEFIT_REVIEW | `benefit-review.md` |
 
 The engagement state should always identify what happens next even when no new document is needed.
+
+## Apply proportionate rigour
+
+Use the same lifecycle for small and large engagements, but do not give every engagement the same amount of ceremony.
+
+Scale the depth of evidence, option analysis and artefacts according to:
+
+- consequence if the decision is wrong;
+- uncertainty;
+- cost and reversibility;
+- security, legal, regulatory or data sensitivity;
+- number of stakeholders and need for an external decision record;
+- operational and support impact.
+
+A low-risk personal project may move through several gates quickly and use a short decision record instead of a formal proposal. A client-facing or consequential engagement may need a detailed proposal, explicit commercial model and durable approval evidence.
+
+Proportionality never means skipping a gate. It means satisfying the gate with no more structure than is useful.
+
+Do not manufacture financial ROI for a project whose real value is non-financial. Do not create meetings, templates or approval layers that cannot change the decision.
 
 ## Skill sequence
 
@@ -218,7 +237,7 @@ Use least privilege and minimise data shared with AI systems.
 
 The `evals/` directory contains synthetic scenario-and-rubric checks for the behaviours that matter most.
 
-Use them as behavioural regression tests, not exact-answer tests. A model may format an answer differently and still pass; it must not bypass evidence, reuse, approval, state or return-path rules.
+Use them as behavioural regression tests, not exact-answer tests. A model may format an answer differently and still pass; it must not bypass evidence, reuse, approval, state, proportionality or return-path rules.
 
 See [`../evals/README.md`](../evals/README.md) for the manual evaluation method.
 
@@ -228,12 +247,12 @@ Going live is not the end of a pstack engagement.
 
 Delivery should hand actual implementation information back, and the engagement should immediately have a benefit-review checkpoint.
 
-The benefit review then asks:
+The benefit review then asks, where material:
 
 - Did it cost what we expected?
 - Did it take as long as expected?
-- Did people adopt it?
-- Did the expected benefit materialise?
+- Did people adopt or use it as expected?
+- Did the expected benefit or outcome materialise?
 - Which assumptions failed?
 - What should future work do differently?
 
